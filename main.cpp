@@ -33,21 +33,21 @@ int main()
 	}
 	justfile.close();
 	//chek answer
-	while(y[x] != 0 || n[x] != 0)
+	while(y.at(x) != 0 || n.at(x) != 0)
   {
-  	cout << info[x] << endl;
+  	cout << info.at(x) << endl;
     rescopyx = x;
   	cout << "y or n?" << endl;
   	cin >> test;
-  	if(test == "y") x = y[x]; 
-    else if(test == "n") x = n[x];
+  	if(test == "y") x = y.at(x); 
+    else if(test == "n") x = n.at(x);
     else 
     {
       cout << "Sorry I do not understand";
       return 0;
     }
 	}
-	cout << "I'm Guessing correct answer is: " << info[x] << "\n" << "Am I right?" <<"\n"<<"y or n"<< endl;
+	cout << "I'm Guessing correct answer is: " << info.at(x) << "\n" << "Am I right?" <<"\n"<<"y or n"<< endl;
 	cin >> test;
 	if (test == "y") cout << "Xexexe, this time I win" << endl;
 	else if (test == "n")
@@ -57,7 +57,7 @@ int main()
 	getline(cin,ans);
 	cout << "Add a question for your answer" << endl;
 	getline(cin,quest);//question (word)
-  y[rescopyx]=ind.size();
+  y.at(rescopyx)=ind.size();
   //question ind
   ind.push_back(ind.size());
 	y.push_back(ind.size());
@@ -71,7 +71,7 @@ int main()
   //output
   ofstream justfile;
   justfile.open("file.txt");
-  for(int x=0;x<=ind.size()-1;x++) justfile << ind[x] << " " << y[x] << " " << n[x] << " " << info[x] << endl;
+  for(int x=0;x<=ind.size()-1;x++) justfile << ind.at(x) << " " << y.at(x) << " " << n.at(x) << " " << info.at(x) << endl;
   justfile.close();
 	}
   else 
