@@ -1,0 +1,11 @@
+0 2 1 Does the animal have a tail?
+1 4 3 Does the animal flying?
+2 0 0 Human
+3 6 5 Does the animal feathered?
+4 7 8 Does the animal gives milk?
+5 0 0 Bird
+6 0 0 Bat
+7 9 10 Does the animal lives in jungle?
+8 0 0 Cow
+9 0 0 Dog
+10 0 0 Lizard
